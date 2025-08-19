@@ -1,0 +1,48 @@
+---
+vxlan:
+  overlay:
+    vrfs:
+      - name: NaC-VRF01
+        vrf_id: 150001
+        vlan_id: 2001
+        vrf_attach_group: all
+      - name: NaC-VRF02
+        vrf_id: 150002
+        vlan_id: 2002
+        vrf_attach_group: leaf1-bgw1
+      - name: NaC-VRF03
+        vrf_id: 150003
+        vlan_id: 2003
+        vrf_attach_group: leaf2-bgw1
+      - name: NaC-VRF04
+        vrf_id: 150004
+        vlan_id: 2004
+        vrf_attach_group: all
+        description: "Demo VRF 04"
+      - name: NaC-VRF05
+        vrf_id: 150005
+        vlan_id: 2005
+        vrf_attach_group: leaf1-bgw1
+        description: "Demo VRF 05"
+      - name: NaC-VRF06
+        vrf_id: 150006
+        vlan_id: 2006
+        vrf_attach_group: leaf2-bgw1
+        description: "Demo VRF 06"
+    vrf_attach_groups:
+      - name: all
+        switches:
+          - { hostname: DC1-Leaf-1 }
+          - { hostname: DC1-Leaf-2 }
+          - { hostname: DC1-BGW-1 }
+      - name: leaf1-bgw1
+        switches:
+          - { hostname: DC1-Leaf-1 }
+          - { hostname: DC1-BGW-1 }
+      - name: leaf2-bgw1
+        switches:
+          - { hostname: DC1-Leaf-2 }
+          - { hostname: DC1-BGW-1 }
+      - name: bgw1
+        switches:
+          - { hostname: DC1-BGW-1 }

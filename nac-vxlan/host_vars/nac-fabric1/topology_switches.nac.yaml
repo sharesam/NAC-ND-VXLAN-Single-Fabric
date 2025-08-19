@@ -1,0 +1,52 @@
+---
+vxlan:
+  topology:
+    switches:
+      - name: DC1-Spine-1
+        serial_number: 95SNS0A6WNI
+        role: spine
+        management:
+          default_gateway_v4: 10.12.119.1
+          management_ipv4_address: 10.12.119.21
+        routing_loopback_id: 0
+        vtep_loopback_id: 1
+      - name: DC1-Leaf-1
+        serial_number: 9QQFTB5T4WE
+        role: leaf
+        management:
+          default_gateway_v4: 10.12.119.1
+          management_ipv4_address: 10.12.119.22
+        routing_loopback_id: 0
+        vtep_loopback_id: 1
+      - name: DC1-Leaf-2
+        serial_number: 98PWV26E0HB
+        role: leaf
+        management:
+          default_gateway_v4: 10.12.119.1
+          management_ipv4_address: 10.12.119.23
+        routing_loopback_id: 0
+        vtep_loopback_id: 1
+      - name: DC1-BGW-1
+        serial_number: 924MLQ3WICN
+        role: leaf
+        management:
+          default_gateway_v4: 10.12.119.1
+          management_ipv4_address: 10.12.119.24
+        routing_loopback_id: 0
+        vtep_loopback_id: 1
+      # - name: netascode-leaf3
+      #   serial_number: 9M2TXMZ7D3N
+      #   role: leaf
+      #   management:
+      #     default_gateway_v4: 10.1.1.1
+      #     management_ipv4_address: 10.1.1.13
+      #   routing_loopback_id: 0
+      #   vtep_loopback_id: 1
+      # - name: netascode-leaf4
+      #   serial_number: 982YGMKUY2B
+      #   role: leaf
+      #   management:
+      #     default_gateway_v4: 10.1.1.1
+      #     management_ipv4_address: 10.1.1.14
+      #   routing_loopback_id: 0
+      #   vtep_loopback_id: 1
