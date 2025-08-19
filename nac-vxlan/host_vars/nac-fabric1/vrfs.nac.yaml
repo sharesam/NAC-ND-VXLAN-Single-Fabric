@@ -29,6 +29,21 @@ vxlan:
         vlan_id: 2006
         vrf_attach_group: leaf2-bgw1
         description: "Demo VRF 06"
+      - name: NaC-VRF07
+        vrf_id: 150007
+        vlan_id: 2007
+        vrf_attach_group: all
+        description: "Demo VRF 07"
+      - name: NaC-VRF08
+        vrf_id: 150008
+        vlan_id: 2008
+        vrf_attach_group: leaf1-bgw1
+        description: "Demo VRF 08"
+      - name: NaC-VRF09
+        vrf_id: 150009
+        vlan_id: 2009
+        vrf_attach_group: leaf2-bgw1
+        description: "Demo VRF 09"
     vrf_attach_groups:
       - name: all
         switches:
