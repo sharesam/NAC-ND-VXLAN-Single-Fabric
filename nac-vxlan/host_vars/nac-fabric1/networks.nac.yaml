@@ -25,7 +25,7 @@ vxlan:
         gw_ipv6_address: "2001::1/64"
         route_target_both: True
         l3gw_on_border: True
-        mtu_l3intf: 7600
+        mtu_l3intf: 9216
         int_desc: "Configured by NetAsCode"
         network_attach_group: leaf2
     network_attach_groups:
