@@ -1,6 +1,0 @@
-export ND_USERNAME='admin'
-export ND_PASSWORD='C!sc0123'
-export ND_DOMAIN='local'
-export NDFC_SW_USERNAME='admin'
-export NDFC_SW_PASSWORD='C!sc0123'
-export ND_HOST='10.122.4.143'
